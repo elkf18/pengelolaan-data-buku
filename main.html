@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengelolaan data buku</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="root">
+      <h1>Website Pengelolaan data buku</h1>
+      <div>
+        <!-- <input style="padding: 8px 12px;" type="text" id="newBookTitle" /> -->
+        <input style="padding: 8px 12px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" type="text" id="newBookTitle" placeholder="Judul Buku" />
+        <input style="padding: 8px 12px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" type="text" id="newBookAuthor" placeholder="Penulis" /> <!-- Input untuk penulis -->
+        <input style="padding: 8px 12px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" type="number" id="newBookYear" placeholder="Tahun" /> <!-- Input untuk tahun -->
+        <button onclick="handleAddBook()" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding: 8px 12px;  border:none;background-color:chocolate;color: white;">Tambah Buku</button>
+      </div>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Tab1')" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ">Belum Selesai Baca</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Selesai Baca</button>
+      </div>
+
+      <div id="Tab1" class="tabcontent">
+        <div id="belumSelesaiList" class="card-container"></div>
+
+      </div>
+
+      <div id="Tab2" class="tabcontent">
+        <div id="selesaiList" class="card-container"></div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+
+</html>
